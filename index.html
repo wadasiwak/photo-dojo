@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <meta name="theme-color" content="#0f1115" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="攝影道場：免費線上練拍照。28 課手機攝影教學、上傳照片本機分析＋AI 講評、「哪張好看」鑑賞測驗、每日拍照任務與作品集。免註冊，照片只存你的裝置。"
+    />
+    <meta name="copyright" content="© 2026 wadasiwak. All rights reserved." />
+    <title>攝影道場 📷 練出好照片的眼與手</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="攝影道場 📷 練出好照片的眼與手" />
+    <meta
+      property="og:description"
+      content="手機攝影教學 28 課、照片評分（本機分析＋AI 講評）、「哪張好看」二選一鑑賞測驗、每日拍照任務。免下載免註冊，照片只存你的裝置。"
+    />
+    <meta property="og:url" content="https://wadasiwak.github.io/photo-dojo/" />
+    <meta property="og:image" content="https://wadasiwak.github.io/photo-dojo/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // 匿名流量統計（GoatCounter，無 cookie）。
+      // 只回報 pathname：hash 可能含課程/題目路徑，一律不外洩（e2e 釘住）。
+      window.goatcounter = {
+        path: function () {
+          return location.pathname
+        },
+      }
+    </script>
+    <script data-goatcounter="https://wadasiwak.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script src="https://wadasiwak.github.io/japan-planner/widget.js" data-site="photo-dojo" defer></script>
+  </body>
+</html>
