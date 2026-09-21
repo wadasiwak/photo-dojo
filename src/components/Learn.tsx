@@ -1,6 +1,7 @@
 import { useApp, type View } from '../state.ts'
 import { CHAPTERS, CHAPTER_IDS, LESSONS, LESSONS_BY_CHAPTER, LESSON_BY_ID, type ChapterId } from '../content/index.ts'
 import { PRINCIPLES } from '../content/principles.ts'
+import { LessonExamples } from './LessonExamples.tsx'
 
 export function Learn({ view }: { view: Extract<View, { name: 'learn' }> }) {
   if (view.lessonId) return <LessonView id={view.lessonId} />
@@ -76,6 +77,7 @@ function LessonView({ id }: { id: string }) {
         <h3>⚠️ 常見錯誤</h3>
         <ul>{lesson.commonMistakes.map((t, i) => <li key={i}>{t}</li>)}</ul>
       </div>
+      <LessonExamples lesson={lesson} />
       <div className="card" style={{ marginTop: 12 }}>
         <h3 style={{ color: 'var(--accent)' }}>🏋️ 練習任務</h3>
         <p>{lesson.exercise.task}</p>

@@ -171,3 +171,10 @@ kbd { background: var(--bg-3); border: 1px solid var(--line); border-radius: 5px
 .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
 .seg button { background: var(--bg); border: 0; color: var(--text-2); padding: 8px 14px; cursor: pointer; }
 .seg button.active { background: var(--bg-3); color: var(--accent); }
+
+/* ── 課程範例 ── */
+.examples { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.example { margin: 0; }
+.example img { width: 100%; border-radius: 10px; background: #000; max-height: 360px; object-fit: contain; }
+.example figcaption { font-size: 0.9rem; color: var(--text-2); margin-top: 6px; }
+.quiz-choice.correct.correct { cursor: default; }

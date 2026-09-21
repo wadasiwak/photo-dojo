@@ -50,9 +50,11 @@ try {
   await page.click('[data-testid="lesson-done"]')
   const doneText = await page.textContent('[data-testid="lesson-done"]')
   if (!doneText.includes('已完成')) fail('標記完成沒生效')
+  const exCount = await page.locator('.examples figure').count()
+  if (exCount < 2) fail(`課程範例圖只有 ${exCount} 張`)
   await page.goto(`${BASE_URL}#learn/composition`)
   await page.waitForSelector('.num.done')
-  ok(`${lessonCount} 課；標記完成 → 列表顯示 ✓`)
+  ok(`${lessonCount} 課；範例圖 ${exCount} 張；標記完成 → 列表顯示 ✓`)
   // 壞 lessonId 回列表
   await page.goto(`${BASE_URL}#learn/not-a-lesson`)
   await page.waitForSelector('[data-testid="lesson-item"]')
